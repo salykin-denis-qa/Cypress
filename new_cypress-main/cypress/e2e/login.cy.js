@@ -34,7 +34,7 @@ describe('Авторизация и восстановление пароля', 
         cy.get(main_page.password).type('iLoveqastudio7');                        // Вводим неверный пароль
         cy.get(main_page.login_button).click();                                   // Нажимаем кнопку войти
         cy.get(result_page.title).contains('Такого логина или пароля нет');       // Проверяем текст в поле
-        cy.get(result_page.title).should('be.visible');                           // Проверяем что текс виден
+        cy.get(result_page.title).should('be.visible');                           // Проверяем что текст виден
     })
 
    it('Неверный логин и верный пароль', function () {
@@ -42,7 +42,7 @@ describe('Авторизация и восстановление пароля', 
         cy.get(main_page.password).type(data.password);                            // Вводим верный пароль
         cy.get(main_page.login_button).click();                                    // Нажимаем кнопку войти
         cy.get(result_page.title).contains('Такого логина или пароля нет');        // Проверяем текст в поле
-        cy.get(result_page.title).should('be.visible');                            // Проверяем что текс виден
+        cy.get(result_page.title).should('be.visible');                            // Проверяем что текст виден
     })
 
    it('Отсутствует @', function () {
@@ -50,7 +50,7 @@ describe('Авторизация и восстановление пароля', 
         cy.get(main_page.password).type(data.password);                            // Вводим верный пароль
         cy.get(main_page.login_button).click();                                    // Нажимаем кнопку войти
         cy.get(result_page.title).contains('Нужно исправить проблему валидации');  // Проверяем текст в поле
-        cy.get(result_page.title).should('be.visible');                            // Проверяем что текс виден
+        cy.get(result_page.title).should('be.visible');                            // Проверяем что текст виден
     })
 
    it('Приведение к строчным буквам в логине', function () {
@@ -58,7 +58,7 @@ describe('Авторизация и восстановление пароля', 
         cy.get(main_page.password).type(data.password);                            // Вводим верный пароль
         cy.get(main_page.login_button).click();                                    // Нажимаем кнопку войти
         cy.get(result_page.title).contains('Авторизация прошла успешно');          // Проверяем текст в поле
-        cy.get(result_page.title).should('be.visible');                            // Проверяем что текс виден
+        cy.get(result_page.title).should('be.visible');                            // Проверяем что текст виден
     })
 })
 
